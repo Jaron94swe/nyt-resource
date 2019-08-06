@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="style.css">
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
@@ -28,12 +29,12 @@
         <div class="form-group">
             <label for="exampleFormControlSelect1">Number of Records to Recieve:</label>
             <select class="form-control" id="records">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                  </select>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
         </div>
         <div class="form-group">
             <label for="exampleFormControlInput1">Start Year (Optional):</label>
@@ -45,6 +46,19 @@
         </div>
     </form>
     <button>submit</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=election&api-key=cGxhl0hDr6vioy7MtHtZ1SbPpJMiZTEG";
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        }).then(function (response) {
+            console.log(response);
+
+        });
+    </script>
+
 </body>
 
 <footer></footer>
