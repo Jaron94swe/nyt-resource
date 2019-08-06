@@ -15,11 +15,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript">
 
-        var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+        var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=election&api-key=cGxhl0hDr6vioy7MtHtZ1SbPpJMiZTEG";
         $.ajax({
             url: queryURL,
             method: "GET"
         }).then(function (response) {
+console.log(response);
 
         });
 
